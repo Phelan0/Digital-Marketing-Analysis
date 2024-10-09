@@ -2,6 +2,14 @@
 
 select * from Marketing
 
+------ Sửa tên dữ liệu chiến dịch
+update Marketing
+set campaign_name = replace(campaign_name, '_', ' ')
+
+update Marketing
+set campaign_name = 'facebook tier2'
+where campaign_name = 'facebOOK tier2'
+
 ------ Tính toán bổ sung các trường chỉ số cần thiết
 alter table Marketing
 add ROMI decimal(10,2)
